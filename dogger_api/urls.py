@@ -5,6 +5,7 @@ from dogger_api import views
 
 router = DefaultRouter()
 router.register(r'hello-viewset', views.HelloViewSet, basename='hello-viewset')
+router.register(r'profile', views.UserProfileViewSet)
 
 urlpatterns=[
     path('hello-view/', views.HelloApiView.as_view()),
