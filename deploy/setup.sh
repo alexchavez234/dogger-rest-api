@@ -35,7 +35,7 @@ supervisorctl update
 supervisorctl restart dogger_api
 
 # Configure nginx
-cp $PROJECT_BASE_PATH/deploy/nginx_profiles_api.conf /etc/nginx/sites-available/dogger_api.conf
+cp $PROJECT_BASE_PATH/deploy/nginx_dogger_api.conf /etc/nginx/sites-available/dogger_api.conf
 rm /etc/nginx/sites-enabled/default
 ln -s /etc/nginx/sites-available/dogger_api.conf /etc/nginx/sites-enabled/dogger_api.conf
 systemctl restart nginx.service
